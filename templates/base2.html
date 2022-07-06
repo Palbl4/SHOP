@@ -10,36 +10,40 @@
 </head>
 <body>
 <header id="header">
-    <nav class="navbar navbar-light" style="background-color: #8fc0cf">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img id="img" src='static/photo/logotip1.png' width="159" height="97" alt="" loading="lazy">
-            </a>
+        <nav class="navbar fixed-top navbar-light" style="background-color: #8fc0cf">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img id="img" src='static/photo/logotip1.png' width="131" height="75" alt="" loading="lazy">
+                </a>
 
-            <div class="row" id="row">
-                <div class="col-sm">
-                    <button type="button" class="btn btn-outline-dark">Мужские кроссовки</button>
-                    <button type="button" class="btn btn-outline-dark">Женские кросссовки</button>
-                    <button type="button" class="btn btn-outline-dark">Подростковые кроссовки</button>
+                <div class="row" id="row">
+                    <div class="col-sm">
+                        <button type="button" class="btn btn-outline-dark btn-lg btn-sm">Мужские кроссовки</button>
+                        <button type="button" class="btn btn-outline-dark btn-lg btn-sm">Женские кросссовки</button>
+                        <button type="button" class="btn btn-outline-dark btn-lg btn-sm">Подростковые кроссовки</button>
+                    </div>
+                </div>
+
+                <div class="btn-group" id="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-dark btn-lg btn-sm">Корзина</button>
+                    <button type="button" class="btn btn-outline-dark btn-lg btn-sm">Личный кабинет</button>
                 </div>
             </div>
-
-            <div class="btn-group" id="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-dark">Корзина</button>
-                <button type="button" class="btn btn-outline-dark">Личный кабинет</button>
-            </div>
-        </div>
-        </div>
+    </div>
     </nav>
 </header>
 <script src="static/js/bootstrap.bundle.min.js"></script>
 {% block header %}{% endblock %}
 
 
+
+
+{% block content %}  {% endblock %}
+
 <footer id="footer" class="footer mt-auto py-3" style="background-color: #8fc0cf">
-  <div class="container">
-    <span class="text-muted">В наших шмотках каждый ЛОХ будет выглядеть как БОГ</span>
-  </div>
+    <div class="container">
+        <span class="text-muted">В наших шмотках каждый ЛОХ будет выглядеть как БОГ</span>
+    </div>
 </footer>
 {% block footer %}{% endblock %}
 
