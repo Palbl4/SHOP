@@ -1,22 +1,30 @@
+/*
 #row{
 display: flex;
 margin-right:200px
 }
+*/
+#header{
+padding: 100px auto;!important
+margin:100px;!important
+}
 
-#footer{
-/*position: fixed!important;
-position: static!important;
-bottom: 0px!important;
-*//*display: inline-block!important;
-box-sizing: border-box!important;*//*
+footer {
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
-min-width: 100%!important;*/
-position: static!important;
-bottom:0px!important;
-display: flex!important;
-flex-direction: column!important;
-height: 100%!important;
+  right: 0;
 }
 
 
+
 background: #9fc2cc;
+
+#id23{
+padding: 600px auto;!important
+margin:600px;!important
+}
+
+d2d
