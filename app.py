@@ -6,22 +6,22 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index3.html")
+    return render_template("index.html")
 
 
-@app.route('/mens_shoes')
+@app.route('/mens-shoes')
 def mens_shoes():
-    return render_template("men_shoes.html")
+    return render_template("mens-shoes.html")
 
 
-@app.route('/female_shoes')
+@app.route('/female-shoes')
 def female_shoes():
-    return render_template("female_shoes.html")
+    return render_template("female-shoes.html")
 
 
-@app.route('/children_shoes')
+@app.route('/children-shoes')
 def children_shoes():
-    return render_template("children_shoes.html")
+    return render_template("children-shoes.html")
 
 
 if __name__ == "__main__":
