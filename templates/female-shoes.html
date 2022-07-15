@@ -1,14 +1,40 @@
 {% extends 'base.html' %}
+{{ super() }}
 
 {% block title%}
-
+Женская обувь обувь
 {% endblock %}
 
 
-{% block body%}
+{% block header %}{% endblock %}
+
+
+{% block content %}
+<div class="container" id="Card">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for el in data %}
+        {% if el.male_female == 'f' %}
+        <div class="col">
+            <div class="card border-secondary mb-3" id="card2" style="height: 550px;">
+                <img src="{{ el.img }}" class="card-img-top" alt="..." style="width: 414px; height: 300px;">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h5 class="card-title">{{ el.title }}</h5>
+                        <p class="card-text" style="height: 60px;">{{ el.description }}</p>
+                        <div class="card-footer">
+                            <h3>Цена: 1399</h3>
+                            <a href="#" class="btn btn-secondary text-light">Добавить в корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}
-
 
 
 {% block footer %}{% endblock %}
