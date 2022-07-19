@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}BerezaShop-Регистрация{% endblock %}
+{{ super() }}
+
+{% block content %}
+
+<form id="register" action="" method="post" class="form-contact">
+<p><label>Имя: </label><input type="text" name="name" value="" requied> </p>
+<p><label>Возвраст: </label><input type="text" name="old" value="" requied></p>
+<p><label>Город: </label><input type="text" name="city" value="" requued></p>
+<p><label>Email: </label><input type="text" name="email" value="" requied></p>
+<p><label>Пароль: </label><input type="password" name="password" value="" requied></p>
+<p><label>Повтор пароля: </label><input type="password" name="password2" value="" requied></p>
+<p><input type="submit" value="Регистрация"/></p>
+</form>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

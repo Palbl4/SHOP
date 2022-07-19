@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{{ super() }}
 
 {% block title%}
 Мужская обувь
@@ -9,11 +10,38 @@
 
 
 {% block content %}
-<div id="id23" class="container" >
-    <div class="d-block w-100" style="margin:150px auto; text-align:center; font-style:">
-    <h1 id="h1" >Это больше, чем обувь. Это философия.</h1>
+
+<div class="container" id="Card">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for el in data %}
+        {% if el.male_female == 'm' %}
+        <div class="col">
+            <div class="card border-secondary mb-3" id="card2" style="height: 550px;">
+                <img src="{{ el.img }}" class="card-img-top" alt="..." style="width: 414px; height: 300px;">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h5 class="card-title">{{ el.title }}</h5>
+                        <p class="card-text" style="height: 60px;">{{ el.description }}</p>
+                        <div class="card-footer">
+                            <h3>Цена: 1399</h3>
+                        </div>
+                        <form action="/basket" method="post">
+                            <input type="hidden" name="basket">
+                            <input type="hidden" name="id" value="{{ el.id }}">
+                            <input type="hidden" name="qty" value="1">
+                            <button type="submit" class="btn btn-primary" name="basket">Добавить в корзину</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
     </div>
 </div>
+
+
 {% endblock %}
 
 {% block footer %}{% endblock %}
+
