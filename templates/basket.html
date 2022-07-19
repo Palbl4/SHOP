@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}BerezaShop-Корзина{% endblock %}
+{{ super() }}
+
+{% block content %}
+
+<div class="container" id="Card">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for el in data %}
+        <div class="col">
+            <div class="card border-secondary mb-3" id="card2" style="height: 550px;">
+                <img src="{{ el.img }}" class="card-img-top" alt="..." style="width: 414px; height: 300px;">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h5 class="card-title">{{ el.title }}</h5>
+                        <p class="card-text" style="height: 60px;">{{ el.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

@@ -13,28 +13,39 @@
 <div class="container" id="Card">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for el in data %}
-        {% if el.male_female == 'f' %}
         <div class="col">
-            <div class="card border-secondary mb-3" id="card2" style="height: 550px;">
-                <img src="{{ el.img }}" class="card-img-top" alt="..." style="width: 414px; height: 300px;">
+            <div class="card h-100 border-secondary text-center">
+                <img src="{{ el.img }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <div class="card-header">
-                        <h5 class="card-title">{{ el.title }}</h5>
-                        <p class="card-text" style="height: 60px;">{{ el.description }}</p>
-                        <div class="card-footer">
-                            <h3>Цена: 1399</h3>
-                            <a href="#" class="btn btn-secondary text-light">Добавить в корзину</a>
-                        </div>
+                    <h5 class="card-title">{{ el.title }}</h5>
+                    <p class="card-text">T{{ el.description }}</p>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
                     </div>
                 </div>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
 </div>
 
-{% endblock %}
+
+<div class="card-group">
+    {% for el in data %}
+    <div class="card col">
+        <img src="{{ el.img }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ el.title }}</h5>
+            <p class="card-text">{{ el.description }}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+    {% endblock %}
 
 
-{% block footer %}{% endblock %}
+    {% block footer %}{% endblock %}
